@@ -1,15 +1,13 @@
 import os
 
 import requests
-from selene import have, command, query
+from selene import command, query
 from selene.support.shared import browser
 
 from paths import RESOURCES_PATH
 
 
 class MainPage:
-    def __init__(self):
-        pass
 
     def open(self):
         browser.open("/")
@@ -29,7 +27,6 @@ class MainPage:
 
     def click_copylink_button(self):
         browser.element('//*[@id="__next"]/header/div[2]/div[5]/div[3]/div/div/button/span').click
-
 
     def scroll_to_footer(self):
         browser.element('[href="/about"]').perform(command.js.scroll_into_view)
