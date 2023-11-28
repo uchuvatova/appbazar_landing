@@ -1,6 +1,6 @@
 import allure
 from allure_commons.types import Severity
-from selene import have, browser
+from selene import browser
 
 from pages.developerPage import DeveloperPage
 from conftest import setup_browser
@@ -13,7 +13,7 @@ from conftest import setup_browser
 @allure.feature("Лендинг")
 @allure.story("Пользователь переходит на страницу консоли разработчика")
 @allure.link("https://developer.appbazar.am/login", name="Страница входа в консоль")
-def test_success_registration(setup_browser):
+def test_should_redirect_to_console(setup_browser):
     developer_page = DeveloperPage()
     with allure.step("Открыть страницу для разработчиков"):
         developer_page.open()

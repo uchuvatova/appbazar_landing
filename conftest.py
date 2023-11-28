@@ -41,7 +41,8 @@ def setup_browser(request):
 
 
 
-'''import pytest
+'''
+import pytest
 from selene.support.shared import browser
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
@@ -61,5 +62,6 @@ def setup_browser():
     browser.config.window_width = 1320
     browser.config.window_height = 900
     yield
-    browser.quit()'''
+    browser.quit()
+    '''
 

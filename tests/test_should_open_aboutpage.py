@@ -1,6 +1,5 @@
 import allure
 from allure_commons.types import Severity
-from selene import have
 from selene.support.shared import browser
 
 from conftest import setup_browser
@@ -14,7 +13,7 @@ from pages.mainPage import MainPage
 @allure.feature("Лэндинг")
 @allure.story("Пользователь открывает страницу с нормативными документами")
 @allure.link("https://appbazar.am/about/", name="Ссылка на страницу с нормативными документами")
-def test_open_aboutpage(setup_browser):
+def test_should_open_aboutpage(setup_browser):
     main_page = MainPage()
 
     with allure.step("Открыть главную страницу"):

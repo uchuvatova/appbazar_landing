@@ -1,5 +1,10 @@
-from selene import have, command
+import os
+
+import requests
+from selene import have, command, query
 from selene.support.shared import browser
+
+from paths import RESOURCES_PATH
 
 
 class MainPage:
@@ -11,6 +16,13 @@ class MainPage:
 
     def click_link_for_developers(self):
         browser.element('[href="/developers/"]').click()
+
+    def click_download_button(self):
+        browser.element('[href="https://appbazar.am/apk"]').click()
+        href = browser.element('[href="https://appbazar.am/apk"]').get(query.attribute("href"))
+        content = requests.get(href).content
+        with open(os.path.join(RESOURCES_PATH, '1.apk'), 'wb') as f:
+            f.write(content)
 
     def scroll_to_share(self):
         browser.element('//*[@id="__next"]/header/div[2]/div[5]/div[3]/div/span').perform(command.js.scroll_into_view)
