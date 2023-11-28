@@ -3,7 +3,7 @@ from allure_commons.types import Severity
 from selene.support.shared import browser
 
 from conftest import setup_browser
-from pages.mainPage import MainPage
+from pages.mainpage import MainPage
 
 
 @allure.title("Открытие страницы с нормативными документами")

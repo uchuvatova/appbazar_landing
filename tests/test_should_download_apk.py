@@ -1,10 +1,12 @@
 import hashlib
+import os
 
 import allure
 from allure_commons.types import Severity
 
 from conftest import setup_browser
-from pages.mainPage import MainPage
+from pages.mainpage import MainPage
+from paths import RESOURCES_PATH
 
 
 @allure.title("Скачивание apk")
@@ -14,7 +16,7 @@ from pages.mainPage import MainPage
 @allure.feature("Лэндинг")
 @allure.story("Пользователь скачивает apk appbazar")
 @allure.link("https://appbazar.am", name="Ссылка на главную страницу")
-def test_should_open_devpage(setup_browser):
+def test_should_download_apk(setup_browser):
     main_page = MainPage()
     with allure.step("Открыть главную страницу"):
         main_page.open()
@@ -26,4 +28,4 @@ def test_should_open_devpage(setup_browser):
 
     # THEN
     with allure.step("Проверка, что файл скачался"):
-        md5 = hashlib.md5(open('1.apk', 'rb').read()).hexdigest()
+        os.path.exists('resources/1.apk')

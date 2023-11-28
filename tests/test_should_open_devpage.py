@@ -2,9 +2,9 @@ import allure
 from allure_commons.types import Severity
 from selene import browser, be
 
-from pages.developerPage import DeveloperPage, button_console
+from pages.developerpage import DeveloperPage, button_console
 from conftest import setup_browser
-from pages.mainPage import MainPage
+from pages.mainpage import MainPage
 
 
 @allure.title("Переход на вкладку 'Разработчикам'")
