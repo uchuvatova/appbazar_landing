@@ -1,4 +1,3 @@
-import hashlib
 import os
 
 import allure
@@ -6,7 +5,7 @@ from allure_commons.types import Severity
 
 from conftest import setup_browser
 from pages.mainpage import MainPage
-from paths import RESOURCES_PATH
+
 
 
 @allure.title("Скачивание apk")
