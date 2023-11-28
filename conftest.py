@@ -8,9 +8,12 @@ from selenium.webdriver.chrome.options import Options
 
 from utils import attach
 
+
 @pytest.fixture(scope='session', autouse=True)
 def load_env():
     load_dotenv()
+
+
 @pytest.fixture(scope='function')
 def setup_browser(request):
     options = Options()
@@ -40,7 +43,6 @@ def setup_browser(request):
     browser.quit()
 
 
-
 '''
 import pytest
 from selene.support.shared import browser
@@ -64,4 +66,3 @@ def setup_browser():
     yield
     browser.quit()
     '''
-
