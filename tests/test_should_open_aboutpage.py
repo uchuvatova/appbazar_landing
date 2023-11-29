@@ -10,7 +10,7 @@ from pages.mainpage import MainPage
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "irauchuvatova")
-@allure.feature("Лэндинг")
+@allure.feature("Landing")
 @allure.story("Пользователь открывает страницу с нормативными документами")
 @allure.link("https://appbazar.am/about/", name="Ссылка на страницу с нормативными документами")
 def test_should_open_aboutpage(setup_browser):

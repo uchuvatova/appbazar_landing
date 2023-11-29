@@ -12,7 +12,7 @@ from pages.mainpage import MainPage
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "irauchuvatova")
-@allure.feature("Лэндинг")
+@allure.feature("Landing")
 @allure.story("Пользователь скачивает apk appbazar")
 @allure.link("https://appbazar.am", name="Ссылка на главную страницу")
 def test_should_download_apk(setup_browser):

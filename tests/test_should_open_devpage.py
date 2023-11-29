@@ -11,7 +11,7 @@ from pages.mainpage import MainPage
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "irauchuvatova")
-@allure.feature("Лэндинг")
+@allure.feature("Landing")
 @allure.story("Пользователь переходит на страницу с информацией для разработчиков")
 @allure.link("https://appbazar.am/developers/", name="Ссылка на страницу 'Разработчикам'")
 def test_should_open_devpage(setup_browser):

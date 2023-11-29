@@ -10,7 +10,7 @@ from conftest import setup_browser
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "irauchuvatova")
-@allure.feature("Лендинг")
+@allure.feature("Landing")
 @allure.story("Пользователь переходит на страницу консоли разработчика")
 @allure.link("https://developer.appbazar.am/login", name="Страница входа в консоль")
 def test_should_redirect_to_console_by_button_add_app(setup_browser):
