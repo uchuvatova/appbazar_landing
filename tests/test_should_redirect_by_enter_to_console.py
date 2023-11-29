@@ -6,7 +6,7 @@ from pages.developerpage import DeveloperPage
 from conftest import setup_browser
 
 
-@allure.title("Переход на страницу входа в консоль")
+@allure.title("Переход на страницу входа в консоль кнопкой 'Войти в консоль'")
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "irauchuvatova")
